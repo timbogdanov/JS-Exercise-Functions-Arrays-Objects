@@ -12,9 +12,9 @@
  *
  * NOTE: This example has been completed for you.
 */
-function addNumbers(num1, num2) {
-  return num1 + num2;
-}
+// function addNumbers(num1, num2) {
+//   return num1 + num2;
+// }
 
 // ⭐️ Example Challenge end ⭐️
 
@@ -36,11 +36,11 @@ function addNumbers(num1, num2) {
  * the returned value should look like: 'Goodbye, Andy. Have a great day.'
  *
 */
-function sayGoodbye(name) {
-  return `Goodbye, ${name}. Have a great day.`;
-}
+// function sayGoodbye(name) {
+//   return `Goodbye, ${name}. Have a great day.`;
+// }
 
-console.log(sayGoodbye('Andy'));
+// console.log(sayGoodbye('Andy'));
 
 /**
  * ### Challenge `temperatureCtoF`
@@ -56,11 +56,11 @@ console.log(sayGoodbye('Andy'));
  * Hint 1: The formula for converting celsius to fahrenheit is t*9/5 + 32 where t is the temperature in celsius.
  * Hint 2: There is a very easy way to round numbers in JS. Do a google search to find out how.
 */
-function temperatureCtoF(celsius) {
-  return Math.round(celsius * 9 / 5 +32);
-}
+// function temperatureCtoF(celsius) {
+//   return Math.round(celsius * 9 / 5 +32);
+// }
 
-console.log(temperatureCtoF(21));
+// console.log(temperatureCtoF(21));
 
 /**
  * ### Challenge `temperatureInF`
@@ -79,15 +79,15 @@ console.log(temperatureCtoF(21));
  *
  * Hint: You can call your `temperatureCtoF` function from inside `temperatureInF`.
 */
-function temperatureInF(temperature, unit) {
-  if (unit === 'C') {
-    return `${Math.round(temperature * 9 / 5 + 32)}C`;
-  } else if (unit === 'F') {
-    return `${Math.round(temperature)}F`;
-  }
-}
+// function temperatureInF(temperature, unit) {
+//   if (unit === 'C') {
+//     return `${Math.round(temperature * 9 / 5 + 32)}C`;
+//   } else if (unit === 'F') {
+//     return `${Math.round(temperature)}F`;
+//   }
+// }
 
-console.log(temperatureInF(80.5, 'F'));
+// console.log(temperatureInF(80.5, 'F'));
 
 
 /**
@@ -106,11 +106,11 @@ console.log(temperatureInF(80.5, 'F'));
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(id, name, email) {
-  return {id, name, email};
-}
+// function makePersonObject(id, name, email) {
+//   return {id, name, email};
+// }
 
-console.log(makePersonObject(1, 'Tim', 'tim.bogdanov@icloud.com'))
+// console.log(makePersonObject(1, 'Tim', 'tim.bogdanov@icloud.com'))
 
 /**
  * ### Challenge `getName`
@@ -125,11 +125,11 @@ console.log(makePersonObject(1, 'Tim', 'tim.bogdanov@icloud.com'))
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName({id, name, email}) {
-  return `Hello, my name is ${name}`;
-}
+// function getName({id, name, email}) {
+//   return `Hello, my name is ${name}`;
+// }
 
-console.log(getName({ id: 1, name: 'Leia', email: 'leia@leia.com' }));
+// console.log(getName({ id: 1, name: 'Leia', email: 'leia@leia.com' }));
 
 /**
  * ### Challenge `appleIndex`
@@ -146,9 +146,11 @@ console.log(getName({ id: 1, name: 'Leia', email: 'leia@leia.com' }));
  * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.
 */
-function appleIndex(/* code here */) {
-  /* code here */
-}
+// function appleIndex(array) {
+//   return array.indexOf('apple');
+// }
+
+// console.log(appleIndex(['orange', 'apple', 'banana']))
 
 /**
  * ### Challenge `isItAnApple`
@@ -165,11 +167,21 @@ function appleIndex(/* code here */) {
  * passing in [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ] as the argument,
  * the returned value should be: [ false, true, false, false, true, false ].
 */
-function isItAnApple(/* code here */) {
-  /* code here */
+function isItAnApple(array) {
+  let newArray = [];
+
+  for (let i = 0; i < array.length; i++){
+    if (array[i] === 'apple'){
+      newArray.push(true);
+    } else {
+      newArray.push(false);
+    }
+  }
+
+  return newArray;
 }
 
-
+console.log(isItAnApple(['orange', 'apple', 'banana', 'apples', 'apple', 'mango' ]))
 
 
 // ⭐️ Example Test Data ⭐️
