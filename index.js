@@ -106,9 +106,11 @@ console.log(temperatureInF(80.5, 'F'));
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(/* code here */) {
-  /* code here */
+function makePersonObject(id, name, email) {
+  return {id, name, email};
 }
+
+console.log(makePersonObject(1, 'Tim', 'tim.bogdanov@icloud.com'))
 
 /**
  * ### Challenge `getName`
@@ -123,10 +125,11 @@ function makePersonObject(/* code here */) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(/* code here */) {
-  /* code here */
+function getName({id, name, email}) {
+  return `Hello, my name is ${name}`;
 }
 
+console.log(getName({ id: 1, name: 'Leia', email: 'leia@leia.com' }));
 
 /**
  * ### Challenge `appleIndex`
@@ -199,7 +202,7 @@ var inventory = [
 **/
 function get3rdCar(inventory) {
   const the3rd = inventory[2];
-  return `The is a ${the3rd.car_make} ${the3rd.car_model}`
+  return `The is a ${the3rd.car_make} ${the3rd.car_model}`;
 }
 
 // 👇 COMPLETE YOUR WORK BELOW 👇
@@ -320,4 +323,3 @@ function getGermanCars(/* code here */) {
 function carMaker(/* code here */) {
   /* code here */
 }
-
